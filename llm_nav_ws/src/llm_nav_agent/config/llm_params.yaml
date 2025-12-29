@@ -1,0 +1,51 @@
+# ============================================
+# LLM Agent 节点参数配置
+# ============================================
+
+llm_nav_agent:
+  ros__parameters:
+    # ========== LLM 配置 ==========
+    # 是否使用本地模型（true: Ollama, false: OpenAI）
+    use_local_llm: false
+    
+    # OpenAI 配置
+    openai_model: "gpt-4o"
+    openai_temperature: 0.0
+    openai_max_tokens: 1024
+    openai_timeout: 30.0
+    
+    # Ollama 本地模型配置
+    ollama_model: "qwen2.5:7b"
+    ollama_base_url: "http://localhost:11434"
+    ollama_temperature: 0.0
+    
+    # ========== Agent 配置 ==========
+    # Agent 最大迭代次数
+    max_iterations: 5
+    # 是否输出详细日志
+    verbose: true
+    # 处理解析错误
+    handle_parsing_errors: true
+    
+    # ========== 对话配置 ==========
+    # 最大对话历史长度
+    max_history_length: 20
+    # 是否启用对话记忆
+    enable_memory: true
+    
+    # ========== 导航配置 ==========
+    # 导航超时时间（秒）
+    nav_timeout: 120.0
+    # 位置配置文件路径（相对于包share目录）
+    locations_file: "config/locations.yaml"
+    # 默认坐标系
+    default_frame_id: "map"
+    
+    # ========== ROS2 话题配置 ==========
+    command_topic: "/llm_agent/command"
+    response_topic: "/llm_agent/response"
+    status_topic: "/llm_agent/status"
+    
+    # ========== 调试配置 ==========
+    debug_mode: false
+    log_conversations: true
