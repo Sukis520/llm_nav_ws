@@ -8,11 +8,11 @@ LLM Nav Agent 将 LangChain 与 ROS2 Nav2 结合，允许用户通过自然语�
 
 ### 主要特性
 
-- 🗣️ **自然语言理解**：支持中文自然语言指令
-- 🤖 **多模型支持**：支持 OpenAI API 和本地 Ollama 模型
-- 🗺️ **Nav2 集成**：无缝对接 ROS2 Nav2 导航栈
-- 📍 **预设位置**：支持命名位置的快速导航
-- 💬 **对话记忆**：保持上下文的多轮对话
+- **自然语言理解**：支持中文自然语言指令
+- **多模型支持**：支持 OpenAI API 和本地 Ollama 模型
+- **Nav2 集成**：无缝对接 ROS2 Nav2 导航栈
+- **预设位置**：支持命名位置的快速导航
+- **对话记忆**：保持上下文的多轮对话
 
 ## 系统要求
 
@@ -31,3 +31,4 @@ sudo apt install ros-humble-nav2-bringup ros-humble-nav2-simple-commander
 
 # Python 依赖
 pip install langchain langchain-openai langchain-community pyyaml
+
